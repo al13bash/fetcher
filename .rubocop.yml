@@ -1,0 +1,39 @@
+inherit_from: .rubocop_todo.yml
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Exclude:
+    - '**/*_spec.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/*_spec.rb'
+    - '**/spec_helper.rb'
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/BlockComments:
+  Enabled: false
+
+Performance/RegexpMatch:
+  Enabled: false
+
+AllCops:
+  TargetRubyVersion:
+    2.4
+  Exclude:
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'bin/*'
+    - 'vendor/**/*'
+    - 'lib/**/*'
+    - 'Rakefile'
